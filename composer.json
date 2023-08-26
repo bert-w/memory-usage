@@ -1,6 +1,6 @@
 {
     "name": "bert-w/memory-usage",
-    "description": "Get the current memory usage (similar to htop) on unix-like systems.",
+    "description": "Retrieve memory info on unix-like systems by reading the `/proc/meminfo` file, with calculations similar to `htop`.",
     "type": "library",
     "license": "MIT",
     "autoload": {
