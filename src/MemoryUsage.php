@@ -84,12 +84,12 @@ class MemoryUsage
     {
         if (!isset($this->meminfo)) {
             $meminfo = [];
-            $file = $this->file();
-
-            while ($line = fgets($file)) {
-                $arr = explode(' ', preg_replace('![\s:]+!', ' ', $line));
-                if (!empty(array_filter($arr))) {
-                    $meminfo[$arr[0]] = (int)$arr[1];
+            if ($file = $this->file()) {
+                while ($line = fgets($file)) {
+                    $arr = explode(' ', preg_replace('![\s:]+!', ' ', $line));
+                    if (!empty(array_filter($arr))) {
+                        $meminfo[$arr[0]] = (int)$arr[1];
+                    }
                 }
             }
 
@@ -101,7 +101,7 @@ class MemoryUsage
     protected function file(): mixed
     {
         if (PHP_OS_FAMILY === 'Windows') {
-            return '';
+            return false;
         }
 
         return fopen('/proc/meminfo', 'r');
