@@ -17,7 +17,7 @@ Get the current memory usage of your system:
 $memory = new \BertW\MemoryUsage\MemoryUsage();
 
 $usage = $memory->usedMemory() . ' / ' . $memory->totalMemory();
-// Result: "1235784 kB / 2040948 kB"
+// Result: "3486252 kB / 8148216 kB"
 ```
 Results are in `kB` (kilobyte) format by default. They can be converted using the `->to()` function which accepts
 a conversion unit like `'B'`, `'kB'`, `'MB'`, `'GB'`, `'TB'`, `'PB'` or `'EB'`. A handy `__toString()` is included
