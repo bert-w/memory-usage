@@ -1,6 +1,6 @@
 {
     "name": "bert-w/memory-usage",
-    "description": "Retrieve memory info on unix-like systems by reading the `/proc/meminfo` file, with calculations similar to `htop`.",
+    "description": "Retrieve memory info on unix-like systems by reading the '/proc/meminfo' file, with calculations similar to the command 'htop'.",
     "type": "library",
     "license": "MIT",
     "autoload": {
